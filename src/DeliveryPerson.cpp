@@ -1,5 +1,3 @@
-//
-// Created by Elyashiv on 06/05/2021.
-//
-
 #include "../include/DeliveryPerson.h"
+
+void deliver(Person*, FlowersBouquet*);

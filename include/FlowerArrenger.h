@@ -1,13 +1,14 @@
-//
-// Created by Elyashiv on 06/05/2021.
-//
-
 #ifndef HW2_FLOWERARRENGER_H
 #define HW2_FLOWERARRENGER_H
 
 
-class FlowerArrenger {
+#include <string>
+#include <vector>
+#include "FlowersBouquet.h"
 
+class FlowerArrenger {
+public:
+    FlowersBouquet* prepareBouquet (std::vector<std::string>);
 };
 
 

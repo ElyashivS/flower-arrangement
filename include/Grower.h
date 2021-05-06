@@ -1,12 +1,18 @@
-//
-// Created by Elyashiv on 06/05/2021.
-//
-
 #ifndef HW2_GROWER_H
 #define HW2_GROWER_H
 
 
+#include <iostream>
+#include <vector>
+#include "Gardener.h"
+#include "FlowersBouquet.h"
+
 class Grower {
+private:
+    Gardener* gardener;
+    std::string name;
+public:
+    FlowersBouquet* prepareOrder(std::vector<std::string>);
 
 };
 
