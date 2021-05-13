@@ -4,8 +4,10 @@
 
 #include "Person.h"
 
-class DeliveryPerson {
+class DeliveryPerson : public Person {
 public:
+    DeliveryPerson(const std::string &name, Person*);
+
     void deliver(Person*, FlowersBouquet*);
 };
 

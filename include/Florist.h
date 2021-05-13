@@ -7,18 +7,19 @@
 #include "DeliveryPerson.h"
 #include "Person.h"
 
-class Florist {
-private:
-    Florist(std::string name);
-    std::string name;
-    WholeSaler* wholeSaler;
-    FlowerArrenger* flowerArrenger;
-    DeliveryPerson* deliveryPerson;
+class Florist : public Person {
+
 public:
 
+    Florist(std::string name, WholeSaler *, FlowerArrenger *, DeliveryPerson *);
     void acceptOrder(Person*, std::vector<std::string>);
 
+    std::string getName();
+
+    WholeSaler *wholeSaler;
+    FlowerArrenger *flowerArrenger;
+    DeliveryPerson *deliveryPerson;
 };
-
-
 #endif //HW2_FLORIST_H
+
+

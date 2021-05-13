@@ -5,10 +5,14 @@
 #include <string>
 #include <vector>
 #include "FlowersBouquet.h"
+#include "Person.h"
 
-class FlowerArrenger {
+class FlowerArrenger : public Person{
 public:
-    FlowersBouquet* prepareBouquet (std::vector<std::string>);
+    FlowerArrenger(std::string name, std::vector<std::string>);
+    std::string getName();
+    void arrangeFlowers(FlowersBouquet*);
+
 };
 
 

@@ -3,17 +3,18 @@
 
 
 #include "FlowersBouquet.h"
+#include "Person.h"
 #include <iostream>
 #include <vector>
 
-class Gardener {
-private:
-    Gardener(std::string name);
+class Gardener : public Person{
 
 public:
-    std::string name;
+    Gardener(std::string name);
     FlowersBouquet* prepareBouquet(std::vector<std::string>);
+    std::string getName();
 
+    std::vector<std::string> flowers = {"Roses", "Violets", "Gladiolus"};
 };
 
 

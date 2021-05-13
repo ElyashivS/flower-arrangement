@@ -1,20 +1,31 @@
 #include <string>
-#include <utility>
 #include "../include/Person.h"
-#include "../include/FlowersBouquet.h"
+#include "../include/Florist.h"
 
-Person::Person(std::string name):name(name) {
+Person::Person(const std::string &name) : name(name) {}
 
+void orderFlowers(Florist* florist, Person* person, std::vector<std::string> flowers) {}
+
+void Person::acceptFlowers(FlowersBouquet* flowersBouquet) {
+    std::cout << getName() << " accepts the " << flowersBouquet->getName() << std::endl;
 }
 
-void Person::acceptFlowers(FlowersBouquet *) {
-
+std::string Person::getName() {
+    return name;
 }
 
-void orderFlowers(Florist*, Person*, std::vector<std::string>) {
-
+void Person::orderFlower(Florist *florist, Person *person, std::vector<std::string> flowers) {
+    std::cout << getName() << " orders flowers to " << person->getName() << " from " << florist->getName() << stringFlowers(flowers) << std::endl;
+    florist->acceptOrder(person, flowers);
 }
 
-void acceptFlowers(FlowersBouquet*) {
+std::string Person::stringFlowers(std::vector<std::string> flowers) {
+    std::string s = "";
+    s += ": ";
 
+    for (int i = 0; i < flowers.size(); i++) {
+        s += flowers[i] + ", ";
+    }
+    return s;
 }
+
