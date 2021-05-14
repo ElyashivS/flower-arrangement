@@ -13,9 +13,9 @@ private:
     Grower* grower;
     std::string name;
 public:
-    FlowersBouquet* acceptOrder(std::vector<std::string>);
+    FlowersBouquet* acceptOrder(const std::vector<std::string>&);
 
-    const std::string &getName() const;
+    std::string getName();
 
     WholeSaler(std::string name, Grower*);
 };
