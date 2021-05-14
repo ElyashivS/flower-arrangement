@@ -3,7 +3,7 @@
 
 
 #include "WholeSaler.h"
-#include "FlowerArrenger.h"
+#include "FlowerArranger.h"
 #include "DeliveryPerson.h"
 #include "Person.h"
 
@@ -11,13 +11,13 @@ class Florist : public Person {
 
 public:
 
-    Florist(std::string name, WholeSaler *, FlowerArrenger *, DeliveryPerson *);
+    Florist(std::string name, WholeSaler *, FlowerArranger *, DeliveryPerson *);
     void acceptOrder(Person*, std::vector<std::string>);
 
     std::string getName();
 
     WholeSaler *wholeSaler;
-    FlowerArrenger *flowerArrenger;
+    FlowerArranger *flowerArranger;
     DeliveryPerson *deliveryPerson;
 };
 #endif //HW2_FLORIST_H
