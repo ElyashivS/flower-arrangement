@@ -13,9 +13,11 @@ std::string FlowersBouquet::getName() {
     std::string s = "";
     s += "flowers: ";
 
-    for (int i = 0; i < bouquet.size(); i++)
-        s += bouquet[i] + ", ";
-
-//    for (std::string flower: bouquet)
-//        s += flower + ", ";
+    for (int i = 0; i < bouquet.size(); i++) {
+        s += bouquet[i];
+        if (i != bouquet.size() - 1) {
+            s += ", ";
+        }
+    }
+    return s;
 }
