@@ -24,7 +24,10 @@ std::string Person::stringFlowers(std::vector<std::string> flowers) {
     s += ": ";
 
     for (int i = 0; i < flowers.size(); i++) {
-        s += flowers[i] + ", ";
+        s += flowers[i];
+        if (i != flowers.size() - 1) {
+            s += ", ";
+        }
     }
     return s;
 }
